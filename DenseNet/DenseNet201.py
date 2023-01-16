@@ -22,5 +22,7 @@ x = GlobalAveragePooling2D()(x)
 x = Dense(1024, activation = 'relu')(x)
 x = Dense(1024, activation = 'relu')(x)
 x = Dense(512, activation = 'relu')(x)
+
+# predictions
 predictions = Dense(num_classes, activation = 'softmax')(x)
 model = Model(inputs = base_model.input, outputs = predictions)
